@@ -2,9 +2,9 @@ SHOPMART - GIAO DICH PHAN TAN (SAGA PATTERN)
 
 1. THONG TIN CHUNG
 - Bai tap: Nang cap phan he dat hang thanh giao dich phan tan (Saga Pattern)
-- Ho ten: NguyenVanA
-- Lop: HN-K24-CNTT1
-- URL Github: https://github.com/rikkei-microservices-system-design-tmd/HN-K24-CNTT1_NguyenVanA.git
+- Ho ten: TranMinhDuc
+- Lop: HCM-K24-CNTT1
+- URL Github: https://github.com/rikkei-microservices-system-design-tmd/HCM-K24-CNTT1-TranMinhDuc.git
 
 2. CONG NGHE SU DUNG
 - Java 17
