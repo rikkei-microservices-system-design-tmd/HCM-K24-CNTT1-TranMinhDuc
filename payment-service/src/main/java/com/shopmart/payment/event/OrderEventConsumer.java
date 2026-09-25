@@ -28,7 +28,7 @@ public class OrderEventConsumer {
                 PaymentResponse response = paymentService.processPayment(request);
 
                 if (response.getStatus() == PaymentStatus.SUCCESS) {
-                    event.setType(SagaEventType.PAYMENT_PROCESSED);
+                    event.setType(SagaEventType.PAYMENT_COMPLETED);
                     log.info("Payment SUCCESS for order id={}", event.getOrderId());
                 } else {
                     event.setType(SagaEventType.PAYMENT_FAILED);

@@ -39,8 +39,8 @@ C. CAU 3: SAGA PATTERN VA KAFKA
 - Su dung mo hinh Choreography Saga thong qua topic "order":
   + Buoc 1: Order-service tao don hang PENDING, gui ORDER_CREATED
   + Buoc 2: Inventory-service nhan su kien, tru ton kho. Neu thanh cong gui INVENTORY_RESERVED, neu that bai gui INVENTORY_FAILED.
-  + Buoc 3: Payment-service lang nghe INVENTORY_RESERVED, tien hanh thanh toan. Neu thanh cong gui PAYMENT_PROCESSED, that bai gui PAYMENT_FAILED.
-  + Buoc 4: Order-service lang nghe PAYMENT_PROCESSED de doi trang thai COMPLETED, hoac nghe PAYMENT_FAILED/INVENTORY_FAILED de doi trang thai CANCELLED.
+  + Buoc 3: Payment-service lang nghe INVENTORY_RESERVED, tien hanh thanh toan. Neu thanh cong gui PAYMENT_COMPLETED, that bai gui PAYMENT_FAILED.
+  + Buoc 4: Order-service lang nghe PAYMENT_COMPLETED de doi trang thai COMPLETED, hoac nghe PAYMENT_FAILED/INVENTORY_FAILED de doi trang thai CANCELLED.
 - Minh chung rollback: Neu thanh toan that bai, payment-service phat su kien PAYMENT_FAILED. Inventory-service nghe duoc, thuc hien cong lai ton kho (increaseStock) cho don hang tren. Order-service chuyen don hang sang CANCELLED.
 
 D. CAU 4: REDIS CACHE

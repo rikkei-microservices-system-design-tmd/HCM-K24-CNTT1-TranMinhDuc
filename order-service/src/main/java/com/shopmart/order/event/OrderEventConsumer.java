@@ -18,7 +18,7 @@ public class OrderEventConsumer {
         log.info("OrderService received event: {}", event);
 
         try {
-            if (event.getType() == SagaEventType.PAYMENT_PROCESSED) {
+            if (event.getType() == SagaEventType.PAYMENT_COMPLETED) {
                 orderService.completeOrder(event.getOrderId());
                 log.info("Order id={} marked as COMPLETED", event.getOrderId());
             } else if (event.getType() == SagaEventType.PAYMENT_FAILED || event.getType() == SagaEventType.INVENTORY_FAILED) {
